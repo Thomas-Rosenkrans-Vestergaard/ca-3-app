@@ -6,8 +6,14 @@ import WelcomeScreen from './screens/WelcomeScreen';
 import FetchScreen from './screens/FetchScreen';
 
 export default createBottomTabNavigator({
-  Welcome: WelcomeScreen,
-  Fetch: FetchScreen,
+  Welcome: {
+    screen: WelcomeScreen,
+    path: '/welcome'
+  },
+  Fetch: {
+    screen: FetchScreen,
+    path: '/fetch'
+  },
 }, {
-  initialRoute: 'Welcome'
+  initialRouteName: 'Welcome'
 });
